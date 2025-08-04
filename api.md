@@ -1,14 +1,5 @@
 # OAuth
 
-Types:
-
-- <code><a href="./src/resources/oauth.ts">OAuthRequestAccessTokenResponse</a></code>
-
-Methods:
-
-- <code title="get /v1/oauth/authorize">client.oauth.<a href="./src/resources/oauth.ts">authorize</a>({ ...params }) -> void</code>
-- <code title="post /v1/oauth/access_token">client.oauth.<a href="./src/resources/oauth.ts">requestAccessToken</a>({ ...params }) -> OAuthRequestAccessTokenResponse</code>
-
 # Rest
 
 ## V1

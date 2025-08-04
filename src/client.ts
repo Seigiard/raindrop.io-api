@@ -16,12 +16,7 @@ import * as Errors from './core/error';
 import * as Uploads from './core/uploads';
 import * as API from './resources/index';
 import { APIPromise } from './core/api-promise';
-import {
-  OAuth,
-  OAuthAuthorizeParams,
-  OAuthRequestAccessTokenParams,
-  OAuthRequestAccessTokenResponse,
-} from './resources/oauth';
+import { OAuth } from './resources/oauth';
 import { Rest } from './resources/rest/rest';
 import { type Fetch } from './internal/builtin-types';
 import { HeadersLike, NullableHeaders, buildHeaders } from './internal/headers';
@@ -728,12 +723,7 @@ RaindropIo.Rest = Rest;
 export declare namespace RaindropIo {
   export type RequestOptions = Opts.RequestOptions;
 
-  export {
-    OAuth as OAuth,
-    type OAuthRequestAccessTokenResponse as OAuthRequestAccessTokenResponse,
-    type OAuthAuthorizeParams as OAuthAuthorizeParams,
-    type OAuthRequestAccessTokenParams as OAuthRequestAccessTokenParams,
-  };
+  export { OAuth as OAuth };
 
   export { Rest as Rest };
 }

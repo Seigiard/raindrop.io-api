@@ -25,9 +25,13 @@ The full API of this library can be found in [api.md](api.md).
 ```js
 import RaindropIo from 'raindrop.io';
 
-const client = new RaindropIo();
+const client = new RaindropIo({
+  apiKey: process.env['RAINDROP_IO_API_KEY'], // This is the default and can be omitted
+});
 
-await client.oauth.authorize({ client_id: 'REPLACE_ME', redirect_uri: 'REPLACE_ME' });
+const response = await client.rest.v1.getFiltersByCollection(0);
+
+console.log(response.collectionId);
 ```
 
 ### Request & Response types
@@ -38,10 +42,12 @@ This library includes TypeScript definitions for all request params and response
 ```ts
 import RaindropIo from 'raindrop.io';
 
-const client = new RaindropIo();
+const client = new RaindropIo({
+  apiKey: process.env['RAINDROP_IO_API_KEY'], // This is the default and can be omitted
+});
 
-const params: RaindropIo.OAuthAuthorizeParams = { client_id: 'REPLACE_ME', redirect_uri: 'REPLACE_ME' };
-await client.oauth.authorize(params);
+const response: RaindropIo.Rest.V1GetFiltersByCollectionResponse =
+  await client.rest.v1.getFiltersByCollection(0);
 ```
 
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
@@ -83,17 +89,15 @@ a subclass of `APIError` will be thrown:
 
 <!-- prettier-ignore -->
 ```ts
-const response = await client.oauth
-  .authorize({ client_id: 'REPLACE_ME', redirect_uri: 'REPLACE_ME' })
-  .catch(async (err) => {
-    if (err instanceof RaindropIo.APIError) {
-      console.log(err.status); // 400
-      console.log(err.name); // BadRequestError
-      console.log(err.headers); // {server: 'nginx', ...}
-    } else {
-      throw err;
-    }
-  });
+const response = await client.rest.v1.getFiltersByCollection(0).catch(async (err) => {
+  if (err instanceof RaindropIo.APIError) {
+    console.log(err.status); // 400
+    console.log(err.name); // BadRequestError
+    console.log(err.headers); // {server: 'nginx', ...}
+  } else {
+    throw err;
+  }
+});
 ```
 
 Error codes are as follows:
@@ -125,7 +129,7 @@ const client = new RaindropIo({
 });
 
 // Or, configure per-request:
-await client.oauth.authorize({ client_id: 'REPLACE_ME', redirect_uri: 'REPLACE_ME' }, {
+await client.rest.v1.getFiltersByCollection(0, {
   maxRetries: 5,
 });
 ```
@@ -142,7 +146,7 @@ const client = new RaindropIo({
 });
 
 // Override per-request:
-await client.oauth.authorize({ client_id: 'REPLACE_ME', redirect_uri: 'REPLACE_ME' }, {
+await client.rest.v1.getFiltersByCollection(0, {
   timeout: 5 * 1000,
 });
 ```
@@ -165,17 +169,13 @@ Unlike `.asResponse()` this method consumes the body, returning once it is parse
 ```ts
 const client = new RaindropIo();
 
-const response = await client.oauth
-  .authorize({ client_id: 'REPLACE_ME', redirect_uri: 'REPLACE_ME' })
-  .asResponse();
+const response = await client.rest.v1.getFiltersByCollection(0).asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
-const { data: result, response: raw } = await client.oauth
-  .authorize({ client_id: 'REPLACE_ME', redirect_uri: 'REPLACE_ME' })
-  .withResponse();
+const { data: response, response: raw } = await client.rest.v1.getFiltersByCollection(0).withResponse();
 console.log(raw.headers.get('X-My-Header'));
-console.log(result);
+console.log(response.collectionId);
 ```
 
 ### Logging
@@ -255,7 +255,7 @@ parameter. This library doesn't validate at runtime that the request matches the
 send will be sent as-is.
 
 ```ts
-client.oauth.authorize({
+client.rest.v1.getFiltersByCollection({
   // ...
   // @ts-expect-error baz is not yet public
   baz: 'undocumented option',
