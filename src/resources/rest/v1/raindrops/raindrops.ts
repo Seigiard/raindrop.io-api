@@ -102,10 +102,10 @@ export class Raindrops extends APIResource {
   }
 }
 
-export type CreatorRef = CreatorRef.UnionMember0 | number;
+export type CreatorRef = CreatorRef.CreatorRef | number;
 
 export namespace CreatorRef {
-  export interface UnionMember0 {
+  export interface CreatorRef {
     _id: number;
 
     email: string;
