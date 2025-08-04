@@ -109,7 +109,7 @@ export interface V1GetFiltersByCollectionResponse {
   types: Array<V1GetFiltersByCollectionResponse.Type>;
 
   [k: string]:
-    | V1GetFiltersByCollectionResponse.unnamed_schema_with_map_parent_0
+    | V1GetFiltersByCollectionResponse.getFilters
     | number
     | Array<V1GetFiltersByCollectionResponse.Created>
     | boolean
@@ -135,7 +135,7 @@ export namespace V1GetFiltersByCollectionResponse {
     count: number;
   }
 
-  export interface unnamed_schema_with_map_parent_0 {
+  export interface getFilters {
     _id: string;
 
     count: number;
