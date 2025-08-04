@@ -1,5 +1,3 @@
-# OAuth
-
 # Rest
 
 ## V1
