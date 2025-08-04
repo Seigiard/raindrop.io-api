@@ -29,9 +29,9 @@ const client = new RaindropIo({
   apiKey: process.env['RAINDROP_IO_API_KEY'], // This is the default and can be omitted
 });
 
-const response = await client.rest.v1.getFiltersByCollection(0);
+const collections = await client.rest.v1.collections.list();
 
-console.log(response.collectionId);
+console.log(collections.items);
 ```
 
 ### Request & Response types
@@ -46,8 +46,7 @@ const client = new RaindropIo({
   apiKey: process.env['RAINDROP_IO_API_KEY'], // This is the default and can be omitted
 });
 
-const response: RaindropIo.Rest.V1GetFiltersByCollectionResponse =
-  await client.rest.v1.getFiltersByCollection(0);
+const collections: RaindropIo.Rest.V1.CollectionListResponse = await client.rest.v1.collections.list();
 ```
 
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
@@ -89,7 +88,7 @@ a subclass of `APIError` will be thrown:
 
 <!-- prettier-ignore -->
 ```ts
-const response = await client.rest.v1.getFiltersByCollection(0).catch(async (err) => {
+const collections = await client.rest.v1.collections.list().catch(async (err) => {
   if (err instanceof RaindropIo.APIError) {
     console.log(err.status); // 400
     console.log(err.name); // BadRequestError
@@ -129,7 +128,7 @@ const client = new RaindropIo({
 });
 
 // Or, configure per-request:
-await client.rest.v1.getFiltersByCollection(0, {
+await client.rest.v1.collections.list({
   maxRetries: 5,
 });
 ```
@@ -146,7 +145,7 @@ const client = new RaindropIo({
 });
 
 // Override per-request:
-await client.rest.v1.getFiltersByCollection(0, {
+await client.rest.v1.collections.list({
   timeout: 5 * 1000,
 });
 ```
@@ -169,13 +168,13 @@ Unlike `.asResponse()` this method consumes the body, returning once it is parse
 ```ts
 const client = new RaindropIo();
 
-const response = await client.rest.v1.getFiltersByCollection(0).asResponse();
+const response = await client.rest.v1.collections.list().asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
-const { data: response, response: raw } = await client.rest.v1.getFiltersByCollection(0).withResponse();
+const { data: collections, response: raw } = await client.rest.v1.collections.list().withResponse();
 console.log(raw.headers.get('X-My-Header'));
-console.log(response.collectionId);
+console.log(collections.items);
 ```
 
 ### Logging
@@ -255,7 +254,7 @@ parameter. This library doesn't validate at runtime that the request matches the
 send will be sent as-is.
 
 ```ts
-client.rest.v1.getFiltersByCollection({
+client.rest.v1.collections.list({
   // ...
   // @ts-expect-error baz is not yet public
   baz: 'undocumented option',
