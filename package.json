@@ -1,6 +1,6 @@
 {
   "name": "raindrop.io",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "The official TypeScript library for the Raindrop Io API",
   "author": "Raindrop Io <>",
   "types": "dist/index.d.ts",
