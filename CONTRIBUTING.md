@@ -42,15 +42,15 @@ If you’d like to use the repository from source, you can either install from g
 To install via git:
 
 ```sh
-$ npm install git+ssh://git@github.com:stainless-sdks/raindrop.io-typescript.git
+$ npm install git+ssh://git@github.com:Seigiard/raindrop.io-api.git
 ```
 
 Alternatively, to link a local copy of the repo:
 
 ```sh
 # Clone
-$ git clone https://www.github.com/stainless-sdks/raindrop.io-typescript
-$ cd raindrop.io-typescript
+$ git clone https://www.github.com/Seigiard/raindrop.io-api
+$ cd raindrop.io-api
 
 # With yarn
 $ yarn link
