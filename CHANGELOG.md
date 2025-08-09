@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.0-alpha.3 (2025-08-09)
+
+Full Changelog: [v0.1.0-alpha.2...v0.1.0-alpha.3](https://github.com/Seigiard/raindrop.io-api/compare/v0.1.0-alpha.2...v0.1.0-alpha.3)
+
+### Chores
+
+* **internal:** move publish config ([7d0b9f8](https://github.com/Seigiard/raindrop.io-api/commit/7d0b9f8d6697125d2f0b29c96aa5aee4adec6cfa))
+* **internal:** update comment in script ([ab52487](https://github.com/Seigiard/raindrop.io-api/commit/ab524876106871ba13cf5f6ccb9aeb737d39bc87))
+* update @stainless-api/prism-cli to v5.15.0 ([6504be4](https://github.com/Seigiard/raindrop.io-api/commit/6504be45879a16159ed8d573acc17bb5359b0102))
+
 ## 0.1.0-alpha.2 (2025-08-04)
 
 Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/Seigiard/raindrop.io-api/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
