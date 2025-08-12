@@ -8,7 +8,7 @@ const client = new RaindropIo({
 });
 
 describe('resource raindrops', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.rest.v1.raindrops.retrieve(0);
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource raindrops', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.rest.v1.raindrops.list(0);
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource raindrops', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -44,7 +44,7 @@ describe('resource raindrops', () => {
     ).rejects.toThrow(RaindropIo.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create0: only required params', async () => {
     const responsePromise = client.rest.v1.raindrops.create0({ link: 'link' });
     const rawResponse = await responsePromise.asResponse();
@@ -56,7 +56,7 @@ describe('resource raindrops', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create0: required and optional params', async () => {
     const response = await client.rest.v1.raindrops.create0({
       link: 'link',
@@ -77,7 +77,7 @@ describe('resource raindrops', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create1', async () => {
     const responsePromise = client.rest.v1.raindrops.create1();
     const rawResponse = await responsePromise.asResponse();
@@ -89,7 +89,7 @@ describe('resource raindrops', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create1: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -97,7 +97,7 @@ describe('resource raindrops', () => {
     ).rejects.toThrow(RaindropIo.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete0', async () => {
     const responsePromise = client.rest.v1.raindrops.delete0(0);
     const rawResponse = await responsePromise.asResponse();
@@ -109,7 +109,7 @@ describe('resource raindrops', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete1', async () => {
     const responsePromise = client.rest.v1.raindrops.delete1(0);
     const rawResponse = await responsePromise.asResponse();
@@ -121,7 +121,7 @@ describe('resource raindrops', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete1: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -145,7 +145,7 @@ describe('resource raindrops', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update0', async () => {
     const responsePromise = client.rest.v1.raindrops.update0(0);
     const rawResponse = await responsePromise.asResponse();
@@ -157,7 +157,7 @@ describe('resource raindrops', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update0: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -165,7 +165,7 @@ describe('resource raindrops', () => {
     ).rejects.toThrow(RaindropIo.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update1', async () => {
     const responsePromise = client.rest.v1.raindrops.update1(0);
     const rawResponse = await responsePromise.asResponse();
@@ -177,7 +177,7 @@ describe('resource raindrops', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update1: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -196,7 +196,7 @@ describe('resource raindrops', () => {
     ).rejects.toThrow(RaindropIo.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateCover', async () => {
     const responsePromise = client.rest.v1.raindrops.updateCover(0);
     const rawResponse = await responsePromise.asResponse();
@@ -208,7 +208,7 @@ describe('resource raindrops', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateCover: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -220,7 +220,7 @@ describe('resource raindrops', () => {
     ).rejects.toThrow(RaindropIo.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateFile', async () => {
     const responsePromise = client.rest.v1.raindrops.updateFile();
     const rawResponse = await responsePromise.asResponse();
@@ -232,7 +232,7 @@ describe('resource raindrops', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateFile: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
