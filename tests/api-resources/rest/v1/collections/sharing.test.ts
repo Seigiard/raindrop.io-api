@@ -8,7 +8,7 @@ const client = new RaindropIo({
 });
 
 describe('resource sharing', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.rest.v1.collections.sharing.create(0, {
       emails: ['dev@stainless.com'],
@@ -23,7 +23,7 @@ describe('resource sharing', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.rest.v1.collections.sharing.create(0, {
       emails: ['dev@stainless.com'],
@@ -31,7 +31,7 @@ describe('resource sharing', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.rest.v1.collections.sharing.delete(0);
     const rawResponse = await responsePromise.asResponse();
@@ -43,7 +43,7 @@ describe('resource sharing', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteUser: only required params', async () => {
     const responsePromise = client.rest.v1.collections.sharing.deleteUser(0, { id: 0 });
     const rawResponse = await responsePromise.asResponse();
@@ -55,12 +55,12 @@ describe('resource sharing', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteUser: required and optional params', async () => {
     const response = await client.rest.v1.collections.sharing.deleteUser(0, { id: 0 });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('get', async () => {
     const responsePromise = client.rest.v1.collections.sharing.get(0);
     const rawResponse = await responsePromise.asResponse();
@@ -72,7 +72,7 @@ describe('resource sharing', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateUser: only required params', async () => {
     const responsePromise = client.rest.v1.collections.sharing.updateUser(0, { id: 0 });
     const rawResponse = await responsePromise.asResponse();
@@ -84,7 +84,7 @@ describe('resource sharing', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateUser: required and optional params', async () => {
     const response = await client.rest.v1.collections.sharing.updateUser(0, { id: 0, role: 'member' });
   });

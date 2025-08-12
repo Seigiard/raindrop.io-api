@@ -8,7 +8,7 @@ const client = new RaindropIo({
 });
 
 describe('resource url', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('checkExists', async () => {
     const responsePromise = client.rest.v1.import.url.checkExists();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource url', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('checkExists: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -31,7 +31,7 @@ describe('resource url', () => {
     ).rejects.toThrow(RaindropIo.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('parse', async () => {
     const responsePromise = client.rest.v1.import.url.parse();
     const rawResponse = await responsePromise.asResponse();
@@ -43,7 +43,7 @@ describe('resource url', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('parse: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
