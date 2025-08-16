@@ -716,7 +716,9 @@ export class RaindropIo {
 
   rest: API.Rest = new API.Rest(this);
 }
+
 RaindropIo.Rest = Rest;
+
 export declare namespace RaindropIo {
   export type RequestOptions = Opts.RequestOptions;
 
