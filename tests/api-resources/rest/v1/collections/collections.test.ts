@@ -8,7 +8,7 @@ const client = new RaindropIo({
 });
 
 describe('resource collections', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.rest.v1.collections.create({
       cover: ['https://example.com'],
@@ -26,7 +26,7 @@ describe('resource collections', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.rest.v1.collections.create({
       cover: ['https://example.com'],
@@ -38,7 +38,7 @@ describe('resource collections', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.rest.v1.collections.retrieve(0);
     const rawResponse = await responsePromise.asResponse();
@@ -50,7 +50,7 @@ describe('resource collections', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.rest.v1.collections.list();
     const rawResponse = await responsePromise.asResponse();
@@ -62,7 +62,7 @@ describe('resource collections', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('clean', async () => {
     const responsePromise = client.rest.v1.collections.clean();
     const rawResponse = await responsePromise.asResponse();
@@ -74,7 +74,7 @@ describe('resource collections', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete0', async () => {
     const responsePromise = client.rest.v1.collections.delete0();
     const rawResponse = await responsePromise.asResponse();
@@ -86,7 +86,7 @@ describe('resource collections', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete0: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -94,7 +94,7 @@ describe('resource collections', () => {
     ).rejects.toThrow(RaindropIo.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete1', async () => {
     const responsePromise = client.rest.v1.collections.delete1(0);
     const rawResponse = await responsePromise.asResponse();
@@ -106,7 +106,7 @@ describe('resource collections', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteInvalid', async () => {
     const responsePromise = client.rest.v1.collections.deleteInvalid();
     const rawResponse = await responsePromise.asResponse();
@@ -118,7 +118,7 @@ describe('resource collections', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('join', async () => {
     const responsePromise = client.rest.v1.collections.join(0);
     const rawResponse = await responsePromise.asResponse();
@@ -130,7 +130,7 @@ describe('resource collections', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listChildrens', async () => {
     const responsePromise = client.rest.v1.collections.listChildrens();
     const rawResponse = await responsePromise.asResponse();
@@ -142,7 +142,7 @@ describe('resource collections', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('merge', async () => {
     const responsePromise = client.rest.v1.collections.merge();
     const rawResponse = await responsePromise.asResponse();
@@ -154,7 +154,7 @@ describe('resource collections', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('merge: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -162,7 +162,7 @@ describe('resource collections', () => {
     ).rejects.toThrow(RaindropIo.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update0', async () => {
     const responsePromise = client.rest.v1.collections.update0();
     const rawResponse = await responsePromise.asResponse();
@@ -174,7 +174,7 @@ describe('resource collections', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update0: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -185,7 +185,7 @@ describe('resource collections', () => {
     ).rejects.toThrow(RaindropIo.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update1', async () => {
     const responsePromise = client.rest.v1.collections.update1(0);
     const rawResponse = await responsePromise.asResponse();
@@ -197,7 +197,7 @@ describe('resource collections', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update1: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -217,7 +217,7 @@ describe('resource collections', () => {
     ).rejects.toThrow(RaindropIo.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateCover', async () => {
     const responsePromise = client.rest.v1.collections.updateCover(0);
     const rawResponse = await responsePromise.asResponse();
@@ -229,7 +229,7 @@ describe('resource collections', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateCover: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

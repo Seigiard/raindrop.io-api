@@ -8,7 +8,7 @@ const client = new RaindropIo({
 });
 
 describe('resource user', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.rest.v1.user.retrieve();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource user', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update', async () => {
     const responsePromise = client.rest.v1.user.update();
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource user', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -67,7 +67,7 @@ describe('resource user', () => {
     ).rejects.toThrow(RaindropIo.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getByName', async () => {
     const responsePromise = client.rest.v1.user.getByName(0);
     const rawResponse = await responsePromise.asResponse();
@@ -79,7 +79,7 @@ describe('resource user', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getStats', async () => {
     const responsePromise = client.rest.v1.user.getStats();
     const rawResponse = await responsePromise.asResponse();

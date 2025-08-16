@@ -20,7 +20,7 @@ describe('resource connect', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('revoke', async () => {
     const responsePromise = client.rest.v1.user.connect.revoke('facebook');
     const rawResponse = await responsePromise.asResponse();

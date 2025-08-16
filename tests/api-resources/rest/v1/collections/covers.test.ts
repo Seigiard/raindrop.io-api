@@ -8,7 +8,7 @@ const client = new RaindropIo({
 });
 
 describe('resource covers', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.rest.v1.collections.covers.list();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource covers', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getByText', async () => {
     const responsePromise = client.rest.v1.collections.covers.getByText('text');
     const rawResponse = await responsePromise.asResponse();
